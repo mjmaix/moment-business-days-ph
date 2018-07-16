@@ -1,16 +1,16 @@
 {
-  "name": "moment-business-days-it",
-  "version": "1.0.1",
-  "description": "MomentJS plugin to use business days with italian holidays",
+  "name": "moment-business-days-ph",
+  "version": "1.0.0",
+  "description": "MomentJS plugin to use business days with Philippine holidays",
   "main": "index.js",
   "scripts": {
     "node-test": "node ./test.js"
   },
-  "author": "Davide Zeffiro <elrancid@gmail.com>",
+  "author": "Michael James Abadilla <mjmaix@gmail.com>",
   "license": "MIT",
   "deprecated": false,
   "engine": "node >= 0.10.26",
-  "homepage": "https://github.com/elrancid/moment-business-days-it",
+  "homepage": "https://github.com/mjmaix/moment-business-days-ph",
   "keywords": [
     "moment",
     "momentjs",
@@ -26,6 +26,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/elrancid/moment-business-days-it.git"
+    "url": "git://github.com/elrancid/moment-business-days-ph.git"
   }
 }

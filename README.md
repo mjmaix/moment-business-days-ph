@@ -1,10 +1,9 @@
-# moment-business-days-it
+# moment-business-days-ph
 This is a momentJS plugin that allows you to use only business days (Monday to Friday) with italian holidays.
 
 **NOTES:**
 * This plugin uses [moment-business-days](https://github.com/kalmecak/moment-business-days).
 * This plugin sets the italian locale (it), format (DD/MM) and official italian holidays.
-* A funcion from [moment-easter](https://github.com/zaygraveyard/moment-easter/blob/master/moment.easter.js) is added to calculate Easter and the day after Easter for every year.
 * It is possible to add custom holidays (for local or district holidays) with italian format (DD/MM).
 * For the documentation see [moment-business-days](https://www.npmjs.com/package/moment-business-days) and [moment](https://momentjs.com/docs/).
 
@@ -12,54 +11,50 @@ This is a momentJS plugin that allows you to use only business days (Monday to F
 
 ````bash
 // For NodeJS
-$ npm install moment-business-days-it
+$ npm install moment-business-days-ph
 // or install and save on package.json
-$ npm install --save moment-business-days-it
+$ npm install --save moment-business-days-ph
 
 // For bower
-$ bower install moment-business-days-it
+$ bower install moment-business-days-ph
 ````
 
 ## How to use
 
 ````javascript
 // NodeJS
-var moment = require('moment-business-days-it');
+var moment = require('moment-business-days-ph');
 // You'll be able use moment and moment-business-days.js as you normally do
 
 // Browser
 // Add after moment.js and moment-business-days.js library
 <script src="moment.js"></script>
 <script src="moment-business-days.js"></script>
-<script src="moment-business-days-it.js"></script>
+<script src="moment-business-days-ph.js"></script>
 ````
 
 ### Add a custom holiday
 
+** Note that only fixed holidays are supported on this version **
+** You may overwrite the holiday function or submit a PR for determining the other holidays **
+
 ````javascript
-var moment = require('moment-business-days-it');
+var moment = require('moment-business-days-ph');
 
 moment.addHoliday('08/09'); // 'custom local holiday' on 8th September (DD/MM)
 
 /*
-moment-business-days-it will now stop considering this holiday as business day
-All other italian holidays is already set:
+moment-business-days-ph will now stop considering fixed regular holidays as business day
+All other Philippine holidays is already set:
  holidays: [
-   '01/01', // 'Capodanno',
-   '06/01', // 'Epifania',
-   '25/04', // 'Anniversario della Liberazione',
-   '01/05', // 'Festa del Lavoro',
-   '02/06', // 'Festa della Repubblica',
-   '15/08', // 'Assunzione / Ferragosto',
-   '01/11', // 'Tutti i santi',
-   '08/12', // 'Immacolata concezione',
-   '25/12', // 'Natale',
-   '26/12', // 'Santo Stefano'
+    '01/01', // New Year
+    '09/04', // Araw ng Kagitingan
+    '01/05', // Labor Day
+    '12/06', // Independence Day
+    '30/11', // Bonifacio Day
+    '25/12', // Christmas Day
+    '30/12', // Rizal Day
  ]
- let easterDays = [
-   '0', // 'Pasqua',
-   '1', // 'Lunedì di Pasquetta'
- ];
 */
 ````
 
@@ -194,3 +189,5 @@ Calculate number of busines days between dates.
 var diff = moment('05-15-2017', 'MM-DD-YYYY').businessDiff(moment('05-08-2017','MM-DD-YYYY'));
 // diff = 5
 ```
+
+# credits to [elrancid/moment-business-days-it](https://github.com/elrancid/moment-business-days-it/), I just forked and modified this project
